@@ -1,0 +1,3 @@
+Prompts voor het AI framework.
+Zet hier promptbestanden neer en log ze in 00_File_Log\JM_game_File_Log.xlsx
+en in 02_AI_Framework\Changelog\AI_Framework_Changelog.xlsx (tab Prompts).

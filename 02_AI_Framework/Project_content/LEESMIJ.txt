@@ -1,0 +1,3 @@
+Projectinhoud voor het AI framework: instructies, kennisbestanden, voorbeelden.
+Log nieuwe bestanden in 00_File_Log\JM_game_File_Log.xlsx
+en in 02_AI_Framework\Changelog\AI_Framework_Changelog.xlsx (tab Project content).

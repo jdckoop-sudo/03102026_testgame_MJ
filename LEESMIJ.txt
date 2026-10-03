@@ -1,0 +1,25 @@
+JM_game - indeling van de map
+Laatst bijgewerkt: 03-10-2026 (bron: GitHub jdckoop-sudo/03102026_testgame_MJ)
+
+00_File_Log\
+    JM_game_File_Log.xlsx           Logboek van alle bestanden: elk bestand dat erbij komt, wijzigt,
+                                    hernoemd, verplaatst of verwijderd wordt krijgt een regel. Tab Current files toont wat er nu staat. Wie het ook doet:
+                                    Jelle, Merijn of Claude.
+
+01_Ballistic_Bastion\
+    Game_versions\JJJJ-MM-DD_Vxx\   Elke speelbare versie in een eigen map met datum en versienummer.
+                                    De nieuwste map (onderaan bij sorteren op naam) is de actuele versie.
+                                    Openen: dubbelklik op index.html.
+    Conversations\JJJJ-MM-DD\       Samenvattingen van gesprekken en sessies, per dag.
+    Changelog\                      Ballistic_Bastion_Changelog.xlsx: wijzigingen AAN HET SPEL zelf
+                                    (features, balans, bugs).
+
+02_AI_Framework\
+    Changelog\                      AI_Framework_Changelog.xlsx: wijzigingen aan prompts en projectinhoud.
+    Prompts\                        Promptbestanden.
+    Project_content\                Instructies, kennisbestanden, voorbeelden.
+
+Afspraken
+- Datums altijd als JJJJ-MM-DD in map- en bestandsnamen, zodat ze vanzelf op volgorde staan.
+- Nieuwe spelversie = nieuwe map in Game_versions, oude versies blijven staan.
+- Na elke wijziging in deze mappen: een regel in 00_File_Log\JM_game_File_Log.xlsx.
