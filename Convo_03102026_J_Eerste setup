@@ -1,0 +1,97 @@
+Ballistic Bastion – dagoverzicht 3 oktober 2026
+3 okt 2026 · @Jelle
+Samenvatting
+Vandaag is jouw spelidee, een donkere fantasy tower defense met pinball-achtige grondstoffenverzameling, uitgegroeid tot een speelbaar browserprototype: Ballistic Bastion, nu op versie 27 als artifact.
+Het spel loopt in beurten van Gather, Build en Defend. Je richt en vuurt één keer een kanon af, de bal moet terugkomen in de bastion, en wat hij raakt of omsluit levert grondstoffen op. Daarna bouw je gebouwen in het veroverde gebied en verdedig je tegen golven. De demo duurt 20 rondes: 3 rustige rondes zonder aanval en daarna 17 groeiende waves met bossgevechten.
+Onderweg kwamen erbij: een startmenu met nieuw spel en verdergaan, een in-game paneel, ongedaan maken, zoomen en slepen, opgeslagen schotrichtingen, research points met ontgrendelbare onderdelen, de War Banner als taunt-gebouw, en tot slot een oneindig gegenereerde map. De balans is deels getest met een geautomatiseerde simulatie, maar nog niet door jou gespeeld. Alles is alleen headless getest, er is nooit een echte browser gebruikt.
+Het spel in het kort
+Elke ronde heeft drie fases, en je kunt per fase maar een deel van de dingen doen.
+Gather: je plaatst en draait machine parts (flippers, bumpers, boosters), richt het kanon en vuurt één keer. Na het schot staat de richting vast.
+Build: je plaatst gebouwen binnen het gebied dat dit schot omsloot, koopt upgrades en besteedt research. Kanon en machine parts staan dan vast.
+Defend: het kanon vuurt zelf langs het vastgelegde pad en bastion en torens schieten pijlen. Je grijpt niet meer in.
+Kernregels zoals we ze hebben vastgelegd:
+• Terugkeer: de bal moet terugkomen in de bastion, anders is de oogst weg en lift de mist niet. Aangeraakte grondstoffen geven volle opbrengst, die binnen het omsloten gebied 60%.
+• Uitbetaling: de oogst komt pas aan het eind van de ronde, na de wave.
+• Gebouwen: hebben HP, worden aangevallen en genezen tussen rondes 30%. Parts hebben geen HP, zijn onverwoestbaar en blokkeren vijanden.
+• Vijanden: gaan altijd eerst naar het kanon, tenzij een War Banner (taunt, bereik 300) ze afleidt. Het kanon toont met een rode boog en het label ENEMIES waar ze vandaan komen.
+• Research: elke gather verschijnen er nieuwe research caches op de map. Punten ontgrendelen onder andere de Booster, War Banner, Quarry, Mine, Ballista en extra upgrades.
+• Verloop: 20 rondes, de eerste 3 zonder aanval, waves 5, 10, 15 en de laatste met een Warlord (de laatste met twee).
+• Map: oneindig, per blok gegenereerd. Verder van de bastion liggen meer ijzer en kristal.
+Tijdlijn van de iteraties
+In volgorde van de dag, steeds op jouw feedback (vaak met screenshot) en telkens opnieuw gepubliceerd.
+1. Eerste setup uit je spelidee: Gather, Build, Defend met pinball-gather.
+2. Het hele omsloten vlak telt mee, niet alleen waar de bal doorheen gaat. Flippers vrij draaien.
+3. Kanon staat vast tijdens Defend. Bastion en torens kregen een eigen pijlsysteem.
+4. Gebouwen echt op de map plaatsen en makkelijker vanaf het begin bouwen.
+5. Uitleg waar de rode lijn langer wordt. Kaart breidt uit na het schot. Linksonder live zichtbaar wat een schot nu zou opleveren.
+6. Mist alleen weg als de bal terugkomt.
+7. Spel in het Engels, balans, zoekfunctie, optie voor nieuw spel.
+8. Beginmenu met starten, verdergaan en nieuwe run. Daarna het menu in het spel zelf, minimaliseerbaar.
+9. Meerdere opgeslagen schotrichtingen. Makkelijker in- en uitzoomen en slepen. Flippers draaibaar.
+10. Meerdere stappen terug (undo en redo). Minimap om vrijgespeelde delen te bekijken.
+11. Geen onzichtbare muren aan de rand. Rubble blijft, flippers zijn voor de speler. Knop om te verplaatsen of uit te zetten.
+12. Duidelijke fasebalk met knop naar de volgende fase. Parts alleen in Gather, gebouwen alleen in Build.
+13. Oogst pas na de wave, begin met rustige rondes. Bouwen alleen in het veroverde gebied. Gebouwen met HP.
+14. Zelfkruisend pad: beide lussen tellen, geen terugkeer betekent niets.
+15. 20 rondes met 3 rustige en groeiende waves, daarna research points op de map.
+16. Aanvalsrichting bij het kanon. Vijanden eerst naar het kanon, War Banner als uitzondering.
+17. Gebouwen kaatsen de bal weer terug met een vierkante hitbox die klopt met wat je ziet.
+18. Menu verdwijnt tijdens Defend. Verder over het zwart kunnen slepen. Research caches verspringen elke ronde.
+19. Balanceslag op de waves.
+20. Oneindig gegenereerde map. Next in Gather vuurt het kanon sowieso af. Rechtermuisknop en Ctrl+klik om de map te slepen.
+Knopen doorgehakt
+Deze keuzes liggen nu vast in het spel. Bij een paar is een eerdere keuze bewust omgedraaid.
+• Schot: één schot per Gather en de bal moet terugkomen, want zonder terugkeer is er geen oogst en geen verkenning.
+• Opbrengst: aangeraakt is 100%, binnen het omsloten gebied 60%. Dat beloont mikken en slim omsluiten.
+• Zelfkruisend pad: beide lussen tellen mee, volgens de logica van het omsloten vlak.
+• Uitbetaling: pas aan het eind van de ronde, na de wave, met rustige rondes om te starten.
+• Kanon en parts: vast zodra Gather voorbij is, omdat het pad in Defend het pad is dat je schoot. Machine parts verplaats je alleen tijdens Gather, ook na het schot, en vanaf Build staan ze vast.
+• Rand van de map: geen onzichtbare muren, want de map groeit.
+• Rubble en flippers: rubble ligt willekeurig op de map en flippers plaatst alleen de speler. Dat was jouw uitdrukkelijke wens.
+• Parts: geen HP, onverwoestbaar, en vijanden kunnen er niet doorheen.
+• Gebouwen: hebben HP, worden aangevallen en genezen 30% per ronde, dus je beschermt ze met andere gebouwen.
+• Bouwen: alleen binnen het gebied van het schot van deze ronde. Oude gebouwen blijven staan.
+• Vijanden: gaan altijd eerst naar het kanon, tenzij een War Banner ze taunt.
+• Bal en gebouwen: gebouwen kaatsen de bal terug met een vierkante hitbox. Eerst was de hitbox rond en klopte niet, daarna lieten ze de bal even door, en toen koos jij ervoor ze toch te laten stuiteren.
+• Research caches: verspringen elke Gather en niet opgepakte verdwijnen.
+• Map: oneindig, met verder weg meer ijzer, kristal en rijkere voorraden.
+• Next in Gather: vuurt het kanon sowieso af en gaat dan door naar Build.
+• Taal: spel in het Engels, overleg in het Nederlands.
+Waar we tegenaan liepen
+Het grootste blijvende probleem: er is nooit een echte browser beschikbaar geweest. Alles is gecontroleerd met een headless omgeving (jsdom), dus hoe het eruitziet en aanvoelt is nog niet door mij gezien.
+• Geen browser om te testen: Playwright mocht geen lokale bestanden of localhost openen. Terugval op jsdom met een nagebootst canvas, uitgebreid zodra iets ontbrak.
+• Bal volgt de richting niet: gebouwen kaatsten de bal met een ronde hitbox, terwijl ze vierkant getekend zijn. Eerst gebouwen genegeerd, daarna op jouw verzoek weer laten stuiteren met een vierkante hitbox die ook in de rode voorspelling zit.
+• Crash bij een sapper: zonder War Banner bleef het doelwit leeg (zat in versie 22). Nu alleen een doelwit als er echt een banner staat.
+• Wave eindigt nooit: een vijand bleef eindeloos langs rubble schuiven. Na 6 seconden zonder voortgang klimt hij eroverheen.
+• Parts plaatsen na het schot: in de code kon het al, maar er was geen zichtbare knop. Knoppen toegevoegd, maar of dit voor jou opgelost is, is nog niet bevestigd.
+• Eerste balance-simulatie: duurde meer dan 10 minuten en liep vast door de softlock hierboven, daarom brak je hem af. Vervangen door een snellere simulatie die direct de spelstappen draait.
+• Eigen bewerkingsfouten: quotes in Python-vervangingen en een verkeerd afgesloten tekenreeks gaven syntaxfouten. Elke wijziging kreeg daarna direct een syntaxcontrole.
+• Rechtermuisknop slepen: bestond al en werkt in de test, maar bij jou leek het niet te werken. Ctrl+klik toegevoegd, de oorzaak bij jou is nog niet gevonden.
+• Oneindige map: mist, terrein, minimap en camera gingen uit van een vast vlak van 1800 bij 1350. Nu is de mist een verzameling cellen, het terrein per blok uit de seed gegenereerd, de ondergrond tegelbaar, de minimap schaalt mee en oude saves worden omgezet.
+Balans en testen
+De balans is gemeten met een geautomatiseerde speler, maar niet met een mens, en daarom is hij nog niet af.
+De testspeler bouwt drie gebouwen per ronde (torens, ballista's, barricades), koopt upgrades en doet research, maar gebruikt geen flippers of bumpers. Hij kreeg drie inkomensniveaus: zwak (ongeveer 22 hout en 14 steen per ronde), middel en sterk. Bij de oorspronkelijke waves overleefden alle niveaus bijna zonder schade, alleen de zwakke speler kwam in de laatste wave in de problemen. Dat was te makkelijk.
+Met duidelijk zwaardere waves stierven alle drie de niveaus tussen ronde 17 en 20, wat voor een bot zonder het balspel redelijk leek. Daarom koos ik iets mildere eindwaarden:
+• Vijand-HP groeit met 0,15 lineair en 0,013 kwadratisch per wave (eerst 0,12 en 0,006).
+• Ghouls per wave: 3 plus 2,5 per wavenummer (eerst 1,7).
+• Brutes: 0,85 per wave na de eerste (eerst 0,55).
+• Shieldbearers vanaf wave 3: 0,75 per wave (eerst 0,5).
+• Sappers vanaf wave 4: ongeveer 1 per 2,1 waves (eerst 1 per 3).
+Wat nog onzeker is: de eindwaarden zijn niet opnieuw doorgerekend, de oneindige map met rijkere voorraden verder weg is niet meegenomen, en jouw eigen spel met flippers en bumpers zal sterker zijn dan de testspeler. Het eerlijke oordeel komt pas als jij een paar runs speelt.
+Openstaand en volgende stappen
+Het belangrijkste is dat jij het spel speelt, want visueel en qua gevoel is er nog niets bevestigd.
+• Speel een paar runs en geef per ronde aan waar het te zwaar of te makkelijk was, dan stel ik de wave-waarden daarop bij.
+• Controleer of machine parts na het schot nu goed te plaatsen zijn met de nieuwe knoppen.
+• Controleer of slepen met de rechtermuisknop bij jou werkt. Zo niet: welke browser en welke muis of trackpad?
+• Kijk of de oneindige map goed aanvoelt: tempo van het genereren, de minimap, de zoom en de camera aan de randen van het verkende gebied.
+• Beslis of de rijkere voorraden verder weg de balans te makkelijk maken en of de kosten omhoog moeten.
+• Na het schot kun je machine parts nog verplaatsen tot je naar Build gaat. Dan wijkt het pad in Defend af van het schot dat je deed. Beslis of dat zo bedoeld is.
+• Nog niet gedaan: de balance-simulatie opnieuw draaien met de eindwaarden en de oneindige map.
+Technische notities
+Het hele spel is één HTML-bestand met een canvas, gepubliceerd als artifact. Elke wijziging is onder hetzelfde artifact gepubliceerd, vandaag tot en met versie 27.
+• Wereld: het kamp staat op de coördinaten 900 en 675. De mist werkt met cellen van 25 pixels, het terrein met blokken van 450 pixels. De seed van de run bepaalt alles, dus dezelfde run geeft dezelfde wereld.
+• Opslag: de run wordt lokaal in de browser bewaard onder de sleutel ballistic-bastion-run-v2 en daarnaast als momentopname bij het live bijwerken van de pagina. Oude saves met een vaste mist worden automatisch omgezet.
+• Bal: stapsgewijze botsingen met lijnstukken, bumpers en vierkante gebouwen. De rode voorspelling draait dezelfde natuurkunde en wordt gecachet, ongeveer 15 milliseconden per richting.
+• Gebied: het omsloten gebied wordt per rij afgetast (non-zero winding), zodat grote lussen snel blijven.
+• Tests: geen echte browser. Scripts met jsdom draaien het spel zonder tekenen: rooktests voor onderdelen en een balans-simulatie met drie inkomensniveaus. Er zijn ook back-ups van eerdere versies.
+• Werkwijze: na elke wijziging een syntaxcontrole, dan een korte test, dan publiceren.
